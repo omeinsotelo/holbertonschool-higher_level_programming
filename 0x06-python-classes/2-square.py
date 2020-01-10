@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 class Square:
-    """Empty class square"""
+    """Empty class square."""
 
-    def __init__(self, sizeSquare=0):
+    def __init__(self, size=0):
         """init square function"""
-        if not isinstance(sizeSquare, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        elif sizeSquare < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__sizeSquare = sizeSquare
+            self.__size = size
