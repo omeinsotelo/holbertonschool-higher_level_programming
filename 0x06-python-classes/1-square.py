@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 class Square():
-    """Empty class square"""
+    """Empty class square."""
 
     def __init__(self, size):
-        """init square function"""
-        self.__sizeSquare = size
+        """init square function."""
+        self.__size = size
