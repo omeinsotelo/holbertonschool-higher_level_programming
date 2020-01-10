@@ -2,6 +2,6 @@
 class Square:
     """Empty class square"""
 
-    def __init__(self, sizeSquare):
+    def __init__(self, size):
         """init square function"""
-        self.__sizeSquare = sizeSquare
+        self.__sizeSquare = size
