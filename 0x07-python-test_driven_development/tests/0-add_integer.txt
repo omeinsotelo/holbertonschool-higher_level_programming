@@ -37,3 +37,20 @@ Adding invalid variable tupla
 >>> add_integer(27, (1,))
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+add positive and negative number
+>>> add_integer(10, -70)
+-60
+
+adding integer and float number
+>>> add_integer(-21, -7.0)
+-28
+
+adding two positive floats
+>>> add_integer(7.5, 9.5)
+17
+
+adding, passing two None variables
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
