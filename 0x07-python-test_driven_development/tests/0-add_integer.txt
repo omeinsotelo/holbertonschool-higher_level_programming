@@ -1,0 +1,39 @@
+The ``add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Impor the add_integer function.
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Adding invalid variable string empty
+>>> add_integer("", "")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Adding invalid variable string empty
+>>> add_integer(20, "")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Adding invalid variable tupla
+>>> add_integer((1,), [1, 2, 3])
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Adding invalid variable list
+>>> add_integer(25, [1, 2, 3])
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Adding invalid variable list
+>>> add_integer([25, 45], [1, 2, 3])
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Adding invalid variable tupla
+>>> add_integer(27, (1,))
+Traceback (most recent call last):
+TypeError: b must be an integer
