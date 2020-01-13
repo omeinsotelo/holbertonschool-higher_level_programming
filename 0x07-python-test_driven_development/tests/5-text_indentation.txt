@@ -1,0 +1,72 @@
+The ``text_indentation`` module
+===============================
+
+Testing ``text_indentation``
+----------------------------
+
+import the text_indentation function
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+valid text without special characters
+>>> text_indentation("Paula Sotelo")
+Paula Sotelo
+
+Invalid text like Integer
+>>> text_indentation(12345)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+Valid text with all special characters
+>>> text_indentation("""Ho.lb?er:ton""")
+Ho.
+<BLANKLINE>
+lb?
+<BLANKLINE>
+er:
+<BLANKLINE>
+ton
+
+Valid text with spaces at the begining
+>>> text_indentation("""    Ho.lb?er:ton     """)
+Ho.
+<BLANKLINE>
+lb?
+<BLANKLINE>
+er:
+<BLANKLINE>
+ton
+
+Valid text with spaces before special characters
+>>> text_indentation("""ho   .lb   .er   .ton""")
+ho   .
+<BLANKLINE>
+lb   .
+<BLANKLINE>
+er   .
+<BLANKLINE>
+ton
+
+Valid text with more spaces and only one special characters
+>>> text_indentation("""              holber.ton""")
+holber.
+<BLANKLINE>
+ton
+
+Valid text with all special characters
+>>> text_indentation(""".?:""")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+Valid with one special character at the begining and the end
+>>> text_indentation(""":holberton:""")
+:
+<BLANKLINE>
+holberton:
+<BLANKLINE>
+
+passing valid text (empty)
+>>> text_indentation("")
