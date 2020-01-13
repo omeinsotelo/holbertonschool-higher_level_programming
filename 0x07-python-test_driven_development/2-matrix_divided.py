@@ -5,21 +5,23 @@ matrix (int, float)
 div (int, float)
 """
 
+
 def matrix_divided(matrix, div):
     """
     Function that divides all elements of a matrix.
     """
+    msj = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    
-    for row in matrix:        
+        raise TypeError(msj)
+
+    for row in matrix:
         if not isinstance(row, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    
-    for row in matrix:        
+            raise TypeError(msj)
+
+    for row in matrix:
         for col in row:
             if not isinstance(col, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(msj)
 
     for row in matrix:
         if len(row) != len(matrix[0]):
