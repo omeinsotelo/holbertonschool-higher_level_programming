@@ -1,0 +1,67 @@
+The ``print_square`` module
+===========================
+
+Using ``print_square``
+----------------------
+
+import the print_square module
+>>> print_square = __import__('4-print_square').print_square
+
+a valid size
+>>> print_square(int(10))
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+a valid size (float)
+>>> print_square(3.5)
+###
+###
+###
+
+a invalid size
+>>> print_square(int("-5"))
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+a invalid size (string)
+>>> print_square("7")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+a invalid size (None)
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+a negative float
+>>> print_square(-8.6)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+a invalid size
+>>> print_square((False, ))
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+a valid size
+>>> print_square(5.0)
+#####
+#####
+#####
+#####
+#####
+
+a invalid size
+>>> print_square(0.0)
+
+
+passing a valid size
+>>> print_square(0)
