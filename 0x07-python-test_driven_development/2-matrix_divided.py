@@ -11,16 +11,16 @@ def matrix_divided(matrix, div):
     Function that divides all elements of a matrix.
     """
     msj = "matrix must be a matrix (list of lists) of integers/floats"
-    if not isinstance(matrix, list):
+    if type(matrix) != list:
         raise TypeError(msj)
 
     for row in matrix:
-        if not isinstance(row, list):
+        if type(row) != list:
             raise TypeError(msj)
 
     for row in matrix:
         for col in row:
-            if not isinstance(col, (int, float)):
+            if type(col) != int and type(col) != float:
                 raise TypeError(msj)
 
     for row in matrix:
