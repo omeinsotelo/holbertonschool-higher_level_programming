@@ -75,7 +75,8 @@ class Rectangle:
         if self.__width != 0 and self.__height != 0:
             for i in range(self.__height):
                 mul += "#" * self.__width
-                mul += "\n"
+                if i + 1 != self.__height:
+                    mul += "\n"
 
         return mul
 
