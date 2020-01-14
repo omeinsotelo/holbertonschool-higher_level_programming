@@ -35,5 +35,5 @@ def matrix_divided(matrix, div):
     new_mtx = [i[:] for i in matrix]
     for i in range(len(new_mtx)):
         for j in range(len(new_mtx[i])):
-            new_mtx[i][j] = round(new_mtx[i][j] / div, 2)
+            new_mtx[i][j] = round(new_mtx[i][j]/div, 2)
     return new_mtx
