@@ -5,4 +5,4 @@
 def number_of_lines(filename=""):
     """ Function returns number lines """
     with open(filename, encoding='utf8') as file:
-        return len(file.read().split("\n"))
+        return len(file.readlines())
