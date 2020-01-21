@@ -10,4 +10,4 @@ def read_lines(filename="", nb_lines=0):
 
     with open(filename, encoding='utf8') as file:
         for i in range(nb_lines):
-            print(file.readline(), end="\n" if(i+1) == total_lines else "")
+            print(file.readline(), end="")
