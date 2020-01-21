@@ -1,0 +1,74 @@
+The ``BaseGeometry`` module
+===========================
+
+Using ``BaseGeometry``
+----------------------
+
+import the BaseGeometry class.
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+valid integer
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("int", 5)
+
+
+a string
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("string", "string")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] string must be an integer
+
+a float
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("float", 98.5)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] float must be an integer
+
+negative
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("int", -7)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] int must be greater than 0
+
+invalid int
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("none", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] none must be an integer
+
+invalid int
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("list", [3, 6, 8])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] list must be an integer
+
+invalid int
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("tuple", (3, 6, 8))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] tuple must be an integer
+
+invalid int
+>>> bg = BaseGeometry()
+>>> try:
+...    bg.integer_validator("dictionary", {'number': 7})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] dictionary must be an integer
+
+valid int
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("dictionary", int("675"))
