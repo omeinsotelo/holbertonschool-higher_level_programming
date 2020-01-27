@@ -50,3 +50,18 @@ class Base:
             new = cls(1)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        """Return all instance"""
+        nfile = cls.__name__ + ".json"
+
+        try:
+            nlist = []
+            with open(nfile, mode="r", encoding="utf-8") as file:
+                _dict = cls.from_json_string(file.read())
+            for i in _dict:
+                nlist.append(cls.create(**i))
+            return nlist
+        except Exception:
+            return []
