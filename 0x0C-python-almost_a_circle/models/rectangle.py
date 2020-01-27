@@ -97,3 +97,12 @@ class Rectangle(Base):
         if kwargs:
             for k, v in kwargs.items():
                 setattr(self, k, v)
+
+    def to_dictionary(self):
+        """Dictionary Method"""
+        _key = ["id", "width", "height", "x", "y"]
+        _tpl = []
+        for i in _key:
+            _tupla = (i, getattr(self, i))
+            _tpl.append(_tupla)
+        return dict(_tpl)
