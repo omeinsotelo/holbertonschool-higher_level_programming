@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Class Rectangle """
+"""
+Module class base
+"""
 from models.base import Base
 
 
