@@ -33,3 +33,10 @@ class Base:
             else:
                 ndic = [i.to_dictionary() for i in list_objs]
                 nfile.write(cls.to_json_string(ndic))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """List of Json"""
+        if not json_string or json_string is None:
+            return []
+        return json.loads(json_string)
