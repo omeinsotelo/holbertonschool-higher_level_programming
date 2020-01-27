@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Module class base
-"""
+"""Module class base"""
 from models.base import Base
 
 
@@ -91,6 +89,7 @@ class Rectangle(Base):
             self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """update obj values"""
         if args:
             attrs = ["id", "width", "height", "x", "y"]
             for i in range(len(args)):
