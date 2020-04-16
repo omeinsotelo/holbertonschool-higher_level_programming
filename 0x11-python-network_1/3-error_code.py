@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Sends a request to the URL and displays the body of the response 
+# Sends a request to the URL and displays the body of the response
 import urllib.request
 from sys import argv
 
