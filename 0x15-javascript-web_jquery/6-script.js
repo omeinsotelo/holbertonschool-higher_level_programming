@@ -1,3 +1,3 @@
-$( '#update_header' ).click(function() {
-  $( this ).html( 'New Header!!!' );
+$('#update_header').click(function () {
+  $(this).html('New Header!!!');
 });
